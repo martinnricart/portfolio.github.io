@@ -34,69 +34,42 @@
         <nav>
           <ul>
             <a href="index.html" class="text-decoration-none">
-              <li>Mi Trabajo</li>
+              <li data-es="Mi Trabajo" data-en="My Work">Mi Trabajo</li>
             </a>
             <a href="certificados.html" class="text-decoration-none">
-              <li>Certificados</li>
+              <li data-es="Certificados" data-en="Certificates">Certificados</li>
             </a>
             <a href="about.html" class="text-decoration-none">
-              <li>Sobre Mi</li>
+              <li data-es="Sobre Mi" data-en="About Me">Sobre Mi</li>
             </a>
           </ul>
         </nav>
+        <button id="translateBtn" class="btn btn-primary">En</button>
       </header>
+
 
       <div class="foto-about-container">
         <div class="fotocv">
           <img src="./images/fotocv.png" alt="fotocv" />
         </div>
         <div class="about-text">
-          <h1 style="color: azure">Hola👋🏼</h1>
-          <p>
-            Soy Martin Ricart, Desarrollador Front End y Diseñador UX/UI.
-            <br />Actualmente me encuentro trabajando como freelance para
-            Protoly Lab, startup de Chile.<br />
-            <br />Me considero una persona creativa, detallista y organizada,
-            con una gran habilidad para el trabajo en equipo. Mis objetivos se
-            centran en crear productos y experiencias digitales visualmente
-            atractivos, funcionales e intuitivas.
-            <br />
-            <br />
-            Te dejo mis redes👇🏽<br />
-            <a
-              href="https://github.com/martinnricart"
-              target="_blank"
-              style="margin-right: 10px"
-            >
-              <img
-                src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
-                alt="GitHub"
-                style="width: 30px; height: 30px"
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/martin-ricart" target="_blank">
-              <img
-                src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
-                alt="LinkedIn"
-                style="width: 30px; height: 30px"
-              />
-            </a>
-            <img
-              src="https://img.icons8.com/ios-filled/50/ffffff/mail.png"
-              alt="Email"
-              class="email-icon"
-              onclick="copyEmail()"
-            />
-            <br />
-            ¡Gracias por tu tiempo y atención!💛
+          <h1 style="color: azure" data-es="Hola👋🏼" data-en="Hello👋🏼">Hola👋🏼</h1>
+          <p data-es="Soy Martin Ricart, Desarrollador Front End y Diseñador UX/UI. Actualmente me encuentro trabajando como freelance para Protoly Lab, startup de Chile. Me considero una persona creativa, detallista y organizada, con una gran habilidad para el trabajo en equipo. Mis objetivos se centran en crear productos y experiencias digitales visualmente atractivos, funcionales e intuitivas. Cualquier otra consulta, te dejo mis redes👇🏽" 
+             data-en="I am Martin Ricart, Front-End Developer and UX/UI Designer. I am currently working as a freelancer for Protoly Lab, a startup from Chile. I consider myself a creative, detail-oriented, and organized person, with a great ability to work in a team. My goals focus on creating visually appealing, functional, and intuitive digital products and experiences. Here are my social networks👇🏽">
+            Soy Martin Ricart, Desarrollador Front End y Diseñador UX/UI. Actualmente me encuentro trabajando como freelance para Protoly Lab, startup de Chile. Me considero una persona creativa, detallista y organizada, con una gran habilidad para el trabajo en equipo. Mis objetivos se centran en crear productos y experiencias digitales visualmente atractivos, funcionales e intuitivas. <br>Te dejo mis redes👇🏽
           </p>
+          <a href="https://github.com/martinnricart" target="_blank" style="margin-right: 10px">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" style="width: 30px; height: 30px" />
+          </a>
+          <a href="https://www.linkedin.com/in/martin-ricart" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px" />
+          </a>
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/mail.png" alt="Email" class="email-icon" onclick="copyEmail()" />
+          <br />
+          <br>
+          <h5 data-en="Thank you for your time and attention!💛" data-es="¡Gracias por tu tiempo y atención!💛"  style="color: white;">¡Gracias por tu tiempo y atención!💛</h5>
         </div>
       </div>
-
-      <!-- <div>
-            <h3>Soy de Rosario, Santa Fe, Argentina👇🏽</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107134.75303878462!2d-60.77903983122675!3d-32.95203820472785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6539335d7d75b%3A0xec4086e90258a557!2sRosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1722885800364!5m2!1ses!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div> -->
 
       <footer>
         <p>&copy; 2024 Martin Ricart. Todos los derechos reservados.</p>
@@ -109,11 +82,6 @@
       ></script>
 
       <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"
-      ></script>
-      <script
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/toastify-js"
       ></script>
@@ -125,6 +93,23 @@
             trancision.style.display = "none";
           }
           content.classList.add("show");
+
+          const translateBtn = document.getElementById("translateBtn");
+          const elementsToTranslate = document.querySelectorAll("[data-en]");
+          let currentLang = "es";
+
+          if (translateBtn) {
+            translateBtn.addEventListener("click", () => {
+              elementsToTranslate.forEach((element) => {
+                element.textContent = currentLang === "es"
+                  ? element.getAttribute("data-en")
+                  : element.getAttribute("data-es");
+              });
+
+              translateBtn.textContent = currentLang === "es" ? "Es" : "En";
+              currentLang = currentLang === "es" ? "en" : "es";
+            });
+          }
         });
 
         function copyEmail() {
