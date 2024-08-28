@@ -368,34 +368,29 @@ html, body {
   display: block;
 }
 
-/* Estilos para el botón de traducción con ID translateBtn */
 #translateBtn {
-  background-color: #000; /* Color de fondo del botón */
+  background-color: #000; 
   color: rgb(231, 198, 9);
-  ; /* Color del texto del botón */
-  border: none; /* Sin bordes */
-  border-radius: 50px; /* Bordes redondeados */
-  padding: 8px 16px; /* Espaciado interno del botón */
-  font-size: 16px; /* Tamaño del texto */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
-  position: absolute; /* Posiciona el botón de manera absoluta dentro del contenedor */
-  right: 40px; /* Ajusta la distancia desde el borde derecho */
-  bottom: 10px; /* Ajusta la distancia desde el borde inferior */
-  z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+  ; 
+  border: none; 
+  border-radius: 50px;
+  padding: 8px 16px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+  position: absolute; 
+  right: 40px; 
+  bottom: 10px; 
+  z-index: 1000; 
 }
 
 #translateBtn:hover {
   background-color: rgb(231, 198, 9);
-  /* Color de fondo al pasar el mouse */
-  color: #000; /* Color del texto al pasar el mouse */
+  color: #000; 
 }
 
 #translateBtn:focus {
-  outline: none; /* Quita el borde de enfoque predeterminado */
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Sombra alrededor del botón al estar en foco */
+  outline: none; 
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); 
 }
 
-[data-en] {
-  white-space: pre-line;
-}
