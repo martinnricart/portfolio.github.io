@@ -240,13 +240,13 @@ html, body {
 
 @media (max-width: 767px) {
   .menu-toggle {
-      display: block; /* Mostrar botón de menú hamburguesa */
+      display: block;
   }
 
   .nav-menu {
-      display: none; /* Ocultar el menú por defecto en móviles */
+      display: none; 
       position: absolute;
-      top: 60px; /* Ajusta para que el menú se despliegue debajo del header */
+      top: 60px; 
       left: 0;
       width: 100%;
       background-color: #161616;
@@ -264,11 +264,11 @@ html, body {
   }
 
   .nav-menu.active {
-      display: block; /* Mostrar el menú cuando se activa */
+      display: block;
   }
 
   .header-logo {
-      text-align: center; /* Mantén el logo centrado en móviles */
+      text-align: center; 
   }
 
 
